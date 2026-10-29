@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InkToday — неофициальный клиент author.today для PocketBook</title>
+<meta name="description" content="InkToday — свободное приложение для электронных книг PocketBook: библиотека author.today, подборки, карточки книг и скачивание EPUB или FB2, если автор разрешил.">
+<meta property="og:title" content="InkToday — author.today на вашем PocketBook">
+<meta property="og:description" content="Неофициальный клиент author.today для электронных книг PocketBook. Свободная программа, GNU GPL v3.">
+<meta property="og:image" content="https://0rb1ta.github.io/InkToday/assets/og.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="fonts/inktoday-sans-black.woff" as="font" type="font/woff" crossorigin>
+<link rel="preload" href="fonts/inktoday-sans-regular.woff" as="font" type="font/woff" crossorigin>
+<link rel="stylesheet" href="assets/screens.css?v=11">
+<link rel="stylesheet" href="assets/site.css?v=11">
+<script>document.documentElement.classList.add("js"); if (/[?&]og\b/.test(location.search)) document.documentElement.classList.add("og")</script>
+</head>
+<body>
+
+<div class="caps" aria-hidden="true"></div>
+<div class="ghosts" id="ghosts" aria-hidden="true"></div>
+
+<header class="topline">
+  <a class="brand" href="#top" aria-label="InkToday, в начало"><img src="assets/logo.svg" alt=""></a>
+  <a class="gh" href="https://github.com/0rb1ta/InkToday">GitHub</a>
+</header>
+
+<main>
+  <section class="page" id="top" data-screen="home" data-pos="r" aria-labelledby="h1">
+    <div class="copy">
+      <img class="hero-logo" src="assets/logo.svg" alt="InkToday">
+      <h1 id="h1"><span class="t">author.today</span><span>на вашем PocketBook</span></h1>
+      <p class="lead">Читайте author.today на PocketBook без телефона и компьютера. Ваша библиотека, каталог и новинки — прямо на читалке, а книги скачиваются в один тап.</p>
+      <div class="acts">
+        <a class="cta solid" href="#download"><svg aria-hidden="true"><use href="assets/icons.svg#solid-download"/></svg>Скачать InkToday</a>
+        <a class="cta" href="#features">Что умеет</a>
+      </div>
+      <p class="small">Бесплатно и с открытым кодом. Проверено на PocketBook 970 (прошивка 6.8).</p>
+    </div>
+    <div class="spot" data-screen="home"></div>
+  </section>
+
+  <section class="page right" id="features" data-screen="book" data-pos="l" aria-labelledby="h2">
+    <div class="copy">
+      <h2 id="h2"><span class="t">Сайт</span><span>в вашей читалке</span></h2>
+      <ul class="feats" id="feats">
+        <li><button data-screen="home" aria-pressed="false"><b>Библиотека и подборки</b><span>Ваши полки и подборки с главной сайта. Под каждой обложкой — одна понятная кнопка</span><i>›</i></button></li>
+        <li><button data-screen="book" aria-pressed="true"><b>Карточка книги</b><span>Аннотация, статус, цикл и свежие главы с датами</span><i>›</i></button></li>
+        <li><button data-screen="series" aria-pressed="false"><b>Циклы по порядку</b><span>Все книги цикла по порядку</span><i>›</i></button></li>
+        <li><button data-screen="downloads" aria-pressed="false"><b>Скачанные</b><span>Книги с новыми главами наверху. Обновить всё — одной кнопкой</span><i>›</i></button></li>
+        <li><button data-screen="settings" aria-pressed="false"><b>Настройки на одной странице</b><span>Всё на одной странице: подборки, формат, фильтры</span><i>›</i></button></li>
+      </ul>
+    </div>
+    <div class="spot" data-screen="book"></div>
+  </section>
+
+  <section class="page" id="rule" data-screen="closed" data-pos="r" data-theme="dark" aria-labelledby="h3">
+    <div class="copy">
+      <h2 id="h3"><span class="t">Только с разрешения</span><span>автора</span></h2>
+      <p class="lead">Скачать можно только то, что автор разрешил. Если скачивание закрыто, книга помечена «На сайте».</p>
+      <p>Её можно добавить в библиотеку и читать на author.today. Откроет автор скачивание — появится кнопка.</p>
+      <div class="tags">
+        <span class="chip"><svg aria-hidden="true"><use href="assets/icons.svg#solid-download"/></svg>Скачать</span>
+        <span class="chip dash"><svg aria-hidden="true"><use href="assets/icons.svg#solid-lock"/></svg>На сайте</span>
+      </div>
+    </div>
+    <div class="spot" data-screen="closed"></div>
+  </section>
+
+  <section class="page right" id="buy" data-screen="buy" data-pos="l" aria-labelledby="h4">
+    <div class="copy">
+      <h2 id="h4"><span class="t">Покупка</span><span>на сайте</span></h2>
+      <p class="lead">Сами мы ничего не продаём. Нажмите «Купить» — появится QR-код. Оплатите на телефоне, нажмите «Я оплатил», и книга станет доступна для скачивания.</p>
+      <p>Так же работают покупка цикла и восстановление пароля.</p>
+    </div>
+    <div class="spot" data-screen="buy"></div>
+  </section>
+
+  <section class="page" id="more" data-screen="start" data-pos="r" aria-labelledby="h5">
+    <div class="copy">
+      <h2 id="h5"><span class="t">И ещё</span><span>по мелочи</span></h2>
+      <div class="grid6">
+        <div><svg aria-hidden="true"><use href="assets/icons.svg#solid-magnifying-glass"/></svg><b>Каталог и поиск</b><p>Жанры, фильтры и поиск по названию, автору или тегу.</p></div>
+        <div><svg aria-hidden="true"><use href="assets/icons.svg#solid-bookmark"/></svg><b>Место чтения</b><p>Начали на телефоне — продолжите на PocketBook с того же места. И наоборот.</p></div>
+        <div><svg aria-hidden="true"><use href="assets/icons.svg#solid-wifi"/></svg><b>Wi-Fi включается сам</b><p>Читалка любит выключать Wi-Fi. Приложение включит его само.</p></div>
+        <div><svg aria-hidden="true"><use href="assets/icons.svg#solid-envelope"/></svg><b>Вход как на сайте</b><p>Логин и пароль от author.today, при первом входе — код из письма. Пароль нигде не хранится.</p></div>
+        <div><svg aria-hidden="true"><use href="assets/icons.svg#solid-file-lines"/></svg><b>EPUB или FB2</b><p>Книги открываются в обычной читалке PocketBook, со всеми её настройками.</p></div>
+        <div><svg aria-hidden="true"><use href="assets/icons.svg#solid-gear"/></svg><b>Фильтры</b><p>Можно скрыть книги 18+ и написанные с помощью ИИ.</p></div>
+        <div><svg aria-hidden="true"><use href="assets/icons.svg#solid-tablet-screen-button"/></svg><b>Без сети</b><p>Скачанные книги читаются и без интернета.</p></div>
+        <div><svg aria-hidden="true"><use href="assets/icons.svg#solid-circle-up"/></svg><b>Обновления</b><p>Вышла новая версия — на главной появится значок.</p></div>
+      </div>
+    </div>
+    <div class="spot" data-screen="start"></div>
+  </section>
+
+  <section class="page right" id="install" data-screen="qr" data-pos="l" aria-labelledby="h6">
+    <div class="copy">
+      <h2 id="h6"><span class="t">Установка</span><span>в три шага</span></h2>
+      <ol class="steps">
+        <li><div><b>Скачайте архив</b>с последней версией.</div></li>
+        <li><div><b>Подключите читалку</b>к компьютеру и скопируйте папки из архива в её память.</div></li>
+        <li><div><b>Запустите</b>Отключите кабель и откройте InkToday в «Приложениях».</div></li>
+      </ol>
+      <p class="note">Обновление — так же, поверх старой версии: вход и книги останутся. Если что-то не получилось — есть <a href="https://github.com/0rb1ta/InkToday#readme">подробная инструкция</a>.</p>
+    </div>
+    <div class="spot" data-screen="qr"></div>
+  </section>
+
+  <section class="page" id="download" data-screen="downloads" data-pos="r" data-theme="dark" aria-labelledby="h7">
+    <div class="copy">
+      <h2 id="h7"><span class="t">Скачать</span><span>InkToday</span></h2>
+      <div class="get">
+        <div class="qrbox"><img src="assets/qr-releases.svg" alt="QR-код страницы релизов InkToday на GitHub"></div>
+        <p>Бесплатно, без рекламы и регистрации. Наведите камеру телефона на код или откройте релизы на GitHub.</p>
+      </div>
+      <div class="acts">
+        <a class="cta solid" href="https://github.com/0rb1ta/InkToday/releases"><svg aria-hidden="true"><use href="assets/icons.svg#solid-download"/></svg>Релизы на GitHub</a>
+        <a class="cta" href="https://github.com/0rb1ta/InkToday">Исходный код</a>
+      </div>
+    </div>
+    <footer class="foot" id="foot">
+      <p>InkToday — неофициальный клиент author.today, свободная программа (GNU GPL v3) для читалок PocketBook. <a href="https://github.com/0rb1ta/InkToday">Код открыт на GitHub</a>.</p>
+      <p>Скачанные книги — только для личного чтения. Права на них принадлежат авторам; распространять файлы нельзя.</p>
+      <p>Использование публичного API согласовано с администрацией author.today (октябрь 2026).</p>
+      <p>InkToday не является официальным продуктом author.today и не связан с порталом. Сайт и приложение не связаны с компанией PocketBook; PocketBook — товарный знак его владельца, название используется только чтобы указать, на каких читалках работает приложение.</p>
+      <p class="fine">Иконки — Font Awesome Free (CC BY 4.0). Шрифт InkToday Sans сделан на основе Lato (SIL OFL 1.1). Книги, авторы и обложки на экранах придуманы. Сайт не ставит cookies и не подключает счётчики.</p>
+    </footer>
+    <div class="spot" data-screen="downloads"></div>
+  </section>
+</main>
+
+
+<div class="flyer ghost g2" aria-hidden="true"><div class="device" data-screen="home"></div></div>
+<div class="flyer ghost" aria-hidden="true"><div class="device" data-screen="home"></div></div>
+<div class="flyer" id="flyer" aria-hidden="true"><div class="device" data-screen="home"></div></div>
+<div class="flash" id="flash"></div>
+
+<nav class="rpager" aria-label="Разделы">
+  <a href="#" id="prev" aria-label="Предыдущий раздел">◀</a><output id="num">1 из 7</output><a href="#" id="next" aria-label="Следующий раздел">▶</a>
+</nav>
+
+<script src="assets/covers.js?v=11"></script>
+<script src="assets/screens.js?v=11"></script>
+<script src="assets/site.js?v=11"></script>
+</body>
+</html>
