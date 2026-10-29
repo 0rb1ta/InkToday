@@ -93,5 +93,6 @@ app/package/build-device.sh
 ## Лицензия
 
 InkToday распространяется по лицензии GNU GPL v3 (файл [LICENSE](LICENSE)).
+Программа распространяется без каких-либо гарантий (см. лицензию); устанавливая её, вы делаете это на свой риск.
 Приложение динамически линкуется с системными библиотеками прошивки PocketBook (`libinkview`, `libcommon_utilities`); они не входят в InkToday и не распространяются вместе с ним.
 Сторонние компоненты (иконки Font Awesome, библиотека QR-кодов, контуры букв Roboto в логотипе) и их лицензии — [app/third_party/LICENSES.md](app/third_party/LICENSES.md).
